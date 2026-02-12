@@ -1,211 +1,194 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8">
   <title>Sujal Babaji Bhor | Java Backend Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      background: #0f172a;
-      color: #f1f5f9;
+    body { font-family: 'Inter', sans-serif; }
+
+    .gradient-text {
+      background: linear-gradient(to right, #7c3aed, #06b6d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
-    .container {
-      width: 90%;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    .hero {
-      padding: 100px 0;
-      background: linear-gradient(135deg,#1e293b,#0f172a);
-    }
-
-    h1 span {
-      color: #38bdf8;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      margin-right: 10px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: 0.3s;
-    }
-
-    .btn-primary {
-      background: #38bdf8;
-      color: #0f172a;
-    }
-
-    .btn-primary:hover {
-      background: #0ea5e9;
-    }
-
-    .btn-outline {
-      border: 1px solid #38bdf8;
-      color: #38bdf8;
-    }
-
-    .btn-outline:hover {
-      background: #38bdf8;
-      color: #0f172a;
-    }
-
-    .section {
-      padding: 80px 0;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 40px;
-      font-size: 28px;
-      color: #38bdf8;
-    }
-
-    .project-card {
-      background: #1e293b;
-      padding: 25px;
-      border-radius: 10px;
-      margin-bottom: 20px;
-      transition: 0.3s;
-    }
-
-    .project-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(56,189,248,0.2);
-    }
-
-    .tag {
-      display: inline-block;
-      background: #334155;
-      padding: 5px 10px;
-      border-radius: 4px;
-      font-size: 12px;
-      margin-bottom: 10px;
-    }
-
-    .skills-grid {
-      display: grid;
-      gap: 20px;
-    }
-
-    .skill-bar {
-      background: #334155;
-      border-radius: 6px;
-      overflow: hidden;
-    }
-
-    .skill-fill {
-      background: #38bdf8;
-      padding: 8px;
-      font-size: 14px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #1e293b;
+    .glass {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.1);
     }
   </style>
 </head>
 
-<body>
+<body class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-gray-200 scroll-smooth">
 
-<section class="hero">
-  <div class="container">
-    <h1>Hi, I'm <span>Sujal Babaji Bhor</span></h1>
-    <p>
-      Java Backend Developer | B.Sc. IT Graduate 2025  
-      Building scalable backend systems using Java, JSP, Servlet & MySQL.
-    </p>
-
-    <a href="#projects" class="btn btn-primary">View Projects</a>
-    <a href="sujal_resume.pdf" download class="btn btn-outline">Download Resume</a>
-    <a href="https://github.com/sujalhunter" target="_blank" class="btn btn-outline">GitHub</a>
+<!-- NAVBAR -->
+<header class="fixed w-full z-50 glass">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <h1 class="text-xl font-bold gradient-text">Sujal Bhor</h1>
+    <nav class="hidden md:flex space-x-8 text-sm">
+      <a href="#about" class="hover:text-purple-400 transition">About</a>
+      <a href="#projects" class="hover:text-purple-400 transition">Projects</a>
+      <a href="#skills" class="hover:text-purple-400 transition">Skills</a>
+      <a href="#contact" class="hover:text-purple-400 transition">Contact</a>
+    </nav>
   </div>
-</section>
+</header>
 
-<section id="projects" class="section container">
-  <h2 class="section-title">Featured Projects</h2>
+<!-- HERO -->
+<section id="about" class="min-h-screen flex items-center pt-28">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
-  <div class="project-card">
-    <h3>Online Café Management System</h3>
-    <span class="tag">JSP • Servlet • MySQL</span>
-    <p>
-      Full-stack food ordering web application with cart, order placement,
-      user authentication, and admin management panel.
-    </p>
-    <a href="https://github.com/sujalhunter/OnlineCafeWebsite" target="_blank" class="btn btn-outline">View Code</a>
-  </div>
+    <div data-aos="fade-right">
+      <h2 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
+        Hi, I'm <span class="gradient-text">Sujal Babaji Bhor</span>
+      </h2>
 
-  <div class="project-card">
-    <h3>Gym Management System (Console)</h3>
-    <span class="tag">Core Java • JDBC • MySQL</span>
-    <p>
-      Console-based membership management system using DAO pattern
-      with full CRUD operations.
-    </p>
-    <a href="https://github.com/sujalhunter/GymManagement-Console" target="_blank" class="btn btn-outline">View Code</a>
-  </div>
+      <p class="text-gray-400 text-lg mb-6">
+        Java Backend Developer passionate about building scalable systems using 
+        Java, JSP, Servlet & MySQL. Focused on clean architecture and backend performance.
+      </p>
 
-</section>
+      <div class="flex flex-wrap gap-4">
+        <a href="#projects"
+           class="bg-gradient-to-r from-purple-600 to-cyan-500 px-6 py-3 rounded-lg font-semibold shadow-lg hover:scale-105 transition">
+          View Projects
+        </a>
 
-<section id="skills" class="section container">
-  <h2 class="section-title">Technical Skills</h2>
+        <a href="sujal_resume.pdf"
+           class="border border-purple-500 px-6 py-3 rounded-lg hover:bg-purple-600 transition">
+          Download Resume
+        </a>
+      </div>
 
-  <div class="skills-grid">
-
-    <div>
-      <p>Java</p>
-      <div class="skill-bar">
-        <div class="skill-fill" style="width:90%">Advanced</div>
+      <div class="mt-6 text-sm text-gray-400">
+        📍 Thane, Maharashtra • ✉️ sujalbhor527@gmail.com
       </div>
     </div>
 
-    <div>
-      <p>JSP & Servlet</p>
-      <div class="skill-bar">
-        <div class="skill-fill" style="width:85%">Strong</div>
-      </div>
-    </div>
-
-    <div>
-      <p>MySQL & JDBC</p>
-      <div class="skill-bar">
-        <div class="skill-fill" style="width:80%">Good</div>
+    <div class="flex justify-center" data-aos="fade-left">
+      <div class="w-64 h-64 rounded-full bg-gradient-to-br from-purple-600 to-cyan-500 flex items-center justify-center text-5xl font-bold shadow-2xl">
+        SB
       </div>
     </div>
 
   </div>
 </section>
 
-<section class="section container">
-  <h2 class="section-title">Contact</h2>
+<!-- PROJECTS -->
+<section id="projects" class="py-24">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-16 gradient-text">Featured Projects</h2>
 
-  <p>Email: <a href="mailto:sujalbhor527@gmail.com">sujalbhor527@gmail.com</a></p>
-  <p>Phone: +91 8767811790</p>
-  <p>
-    LinkedIn:
-    <a href="https://www.linkedin.com/in/sujal-bhor-2aa413322" target="_blank">
-      linkedin.com/in/sujal-bhor
-    </a>
-  </p>
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <div class="glass p-6 rounded-xl hover:scale-105 transition duration-300" data-aos="zoom-in">
+        <h3 class="text-xl font-semibold mb-3">Online Café Management</h3>
+        <p class="text-gray-400 text-sm mb-4">
+          Full-stack food ordering system using JSP, Servlet & MySQL with authentication & admin panel.
+        </p>
+        <a href="https://github.com/sujalhunter/OnlineCafeWebsite" target="_blank"
+           class="text-purple-400 font-semibold hover:underline">
+          View Code →
+        </a>
+      </div>
+
+      <div class="glass p-6 rounded-xl hover:scale-105 transition duration-300" data-aos="zoom-in" data-aos-delay="100">
+        <h3 class="text-xl font-semibold mb-3">Gym Management System</h3>
+        <p class="text-gray-400 text-sm mb-4">
+          Console-based Java system using JDBC & DAO pattern with complete CRUD operations.
+        </p>
+        <a href="https://github.com/sujalhunter/GymManagement-Console" target="_blank"
+           class="text-purple-400 font-semibold hover:underline">
+          View Code →
+        </a>
+      </div>
+
+      <div class="glass p-6 rounded-xl hover:scale-105 transition duration-300" data-aos="zoom-in" data-aos-delay="200">
+        <h3 class="text-xl font-semibold mb-3">Cafe Console System</h3>
+        <p class="text-gray-400 text-sm mb-4">
+          Customer & order management system built using Core Java and MySQL.
+        </p>
+        <a href="https://github.com/sujalhunter/CafeManagement-Console-" target="_blank"
+           class="text-purple-400 font-semibold hover:underline">
+          View Code →
+        </a>
+      </div>
+
+    </div>
+  </div>
 </section>
 
-<footer>
+<!-- SKILLS -->
+<section id="skills" class="py-24 bg-slate-900">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-16 gradient-text">Technical Skills</h2>
+
+    <div class="grid md:grid-cols-4 gap-6 text-center">
+
+      <div class="glass p-6 rounded-xl hover:bg-purple-700 transition">
+        <h4 class="font-semibold text-lg">Java</h4>
+      </div>
+
+      <div class="glass p-6 rounded-xl hover:bg-purple-700 transition">
+        <h4 class="font-semibold text-lg">JSP & Servlet</h4>
+      </div>
+
+      <div class="glass p-6 rounded-xl hover:bg-purple-700 transition">
+        <h4 class="font-semibold text-lg">MySQL & JDBC</h4>
+      </div>
+
+      <div class="glass p-6 rounded-xl hover:bg-purple-700 transition">
+        <h4 class="font-semibold text-lg">Git & GitHub</h4>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-24">
+  <div class="max-w-4xl mx-auto px-6 text-center glass p-10 rounded-xl" data-aos="fade-up">
+    <h2 class="text-3xl font-bold mb-6 gradient-text">Let's Connect</h2>
+
+    <p class="text-gray-400 mb-6">
+      I'm open to backend developer opportunities and collaborative projects.
+    </p>
+
+    <div class="flex justify-center gap-6">
+      <a href="mailto:sujalbhor527@gmail.com"
+         class="bg-purple-600 px-6 py-3 rounded-lg hover:bg-purple-700 transition">
+        Email Me
+      </a>
+
+      <a href="https://github.com/sujalhunter" target="_blank"
+         class="border border-purple-500 px-6 py-3 rounded-lg hover:bg-purple-600 transition">
+        GitHub
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="text-center py-6 border-t border-gray-800 text-gray-500">
   © <span id="year"></span> Sujal Babaji Bhor | Java Backend Developer
 </footer>
 
+<!-- SCRIPTS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
+  AOS.init({ duration: 1000 });
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
